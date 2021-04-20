@@ -4,8 +4,8 @@ package cursojava.classes;
 public class Aluno {
 	
 	/*Esses são os atributos do Aluno que representa os dados do mundo real*/
-	String nome;
-	int idade;
+	public String nome;
+	public int idade;
 	String dataNascimento;
 	String registroGeral;
 	String numeroCpf;

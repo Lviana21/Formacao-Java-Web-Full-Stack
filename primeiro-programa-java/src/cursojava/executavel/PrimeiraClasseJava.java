@@ -10,8 +10,16 @@ public class PrimeiraClasseJava {
 		/* new Aluno() é uma instancia (Criação de Objeto)*/
 		/* aluno1 é uma referencia para o obejto aluno*/
 		Aluno Aluno1 = new Aluno(); /*Aqui será João "irá receber um valor qualquer"*/
+		Aluno1.nome = "Marcela";
+		Aluno1.idade = 20;
 		
 		Aluno Aluno2 = new Aluno(); /*Aqui será João "irá receber um valor qualquer"*/
+		Aluno2.nome = "Karol";
+		Aluno2.idade = 19;
+		
+		System.out.println("As alunas que fazem inglês são: " + Aluno1.nome + " e " + Aluno2.nome + "\n" + 
+		"Suas idades são: " + Aluno1.idade + " e " + Aluno2.idade);
+		
 		
 		Aluno Aluno3 = new Aluno("Luciano");
 		
