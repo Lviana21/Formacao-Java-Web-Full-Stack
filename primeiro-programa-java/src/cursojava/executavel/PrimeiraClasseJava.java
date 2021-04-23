@@ -20,6 +20,10 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula("10/10/2020");
 		aluno1.setNomeEscola("Colegio Nascional Udi");
 		aluno1.setSerieMatriculado("2° Grau");
+		aluno1.setNota1(8);
+		aluno1.setNota2(7.5);
+		aluno1.setNota3(9);
+		aluno1.setNota4(4.2);
 		
 		System.out.println("Nome: " + aluno1.getNome() + "\n" +
 		"Idade: " + aluno1.getIdade() + "\n" + "Data Nascimento: " + aluno1.getDataNascimento() + "\n" + 
@@ -27,6 +31,8 @@ public class PrimeiraClasseJava {
 		"Nome Mãe: " + aluno1.getNomeMae() + "\n" + "Nome Pai: " + aluno1.getNomePai() + "\n" +
 		"Data da Matricula: " + aluno1.getDataMatricula() + "\n" + "Nome da Escola: " + aluno1.getNomeEscola() + "\n" + 
 		"Série Matriculado: " + aluno1.getSerieMatriculado());
+		System.out.println("Média da Nota é: " + aluno1.getMediaNota());
+		
 		
 		/*================================================================================================================*/
 		System.out.println("\n" + "--------------------------------------------------------------------------------------------------" + "\n");
@@ -56,5 +62,16 @@ public class PrimeiraClasseJava {
 		
 		Aluno aluno4 = new Aluno("Luciano", 30);
 		
-	}
+		for (int i = 1 ; i <= 12 ; i++) {
+	    	
+			if(i % 2 == 0) {
+				System.out.println(i);
+			}
+	       }
 }
+}
+
+	
+	
+	
+	
