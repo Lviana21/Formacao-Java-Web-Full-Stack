@@ -32,7 +32,8 @@ public class PrimeiraClasseJava {
 		"Data da Matricula: " + aluno1.getDataMatricula() + "\n" + "Nome da Escola: " + aluno1.getNomeEscola() + "\n" + 
 		"Série Matriculado: " + aluno1.getSerieMatriculado());
 		System.out.println("Média da Nota é: " + aluno1.getMediaNota());
-		
+		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));//Operador terminario: ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado = " + (aluno1.getAlunoAprovado2()));
 		
 		/*================================================================================================================*/
 		System.out.println("\n" + "--------------------------------------------------------------------------------------------------" + "\n");
@@ -56,18 +57,15 @@ public class PrimeiraClasseJava {
 				"Data da Matricula: " + aluno2.getDataMatricula() + "\n" + "Nome da Escola: " + aluno2.getNomeEscola() + "\n" + 
 				"Série Matriculado: " + aluno2.getSerieMatriculado());
 		
+		
+		
 		/*================================================================================================================*/
 		
 		Aluno aluno3 = new Aluno("Luciano");
 		
 		Aluno aluno4 = new Aluno("Luciano", 30);
 		
-		for (int i = 1 ; i <= 12 ; i++) {
-	    	
-			if(i % 2 == 0) {
-				System.out.println(i);
-			}
-	       }
+		
 }
 }
 
