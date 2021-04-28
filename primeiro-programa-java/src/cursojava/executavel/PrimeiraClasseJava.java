@@ -9,6 +9,7 @@ public class PrimeiraClasseJava {
 	/*Main é um método auto executável em Java*/
 	public static void main(String[] args) {
 		
+		/*1° PASSAR OS DADOS "ENTRADA DE DADOS"*/
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
@@ -24,9 +25,12 @@ public class PrimeiraClasseJava {
 		String nota3 = JOptionPane.showInputDialog("Nota3?");
 		String nota4 = JOptionPane.showInputDialog("Nota4?");
 		
+		/*2° INSTANCIAR OS OBJETOS*/
 		/* new Aluno() é uma instancia (Criação de Objeto)*/
 		/* aluno1 é uma referencia para o obejto aluno*/
 		Aluno aluno1 = new Aluno(); /*Aqui será João "irá receber um valor qualquer"*/
+		
+		/*3° PASSAR OS VALORES QUE VEIO DA ENTRADA DE DADOS PARA O OBJETO*/
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
@@ -54,7 +58,7 @@ public class PrimeiraClasseJava {
 		
 		
 		/*================================================================================================================*/
-		
+		/*4° PROCESSAR E TER O RESULTADO FINAL*/
 		System.out.println(aluno1.toString()); /*Descrição do objeto na memória*/
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
