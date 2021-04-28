@@ -173,4 +173,15 @@ public class Aluno {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + getNome() + ", idade=" + getIdade() + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}
+	
+	
+
 }
