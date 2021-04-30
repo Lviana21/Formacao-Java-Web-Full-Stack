@@ -49,15 +49,15 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNota1(Double.valueOf(nota1));
-		aluno1.setNota2(Double.valueOf(nota2));
-		aluno1.setNota3(Double.valueOf(nota3));
-		aluno1.setNota4(Double.valueOf(nota4));
+		aluno1.getDisciplina().setNota1(Double.valueOf(nota1));
+		aluno1.getDisciplina().setNota2(Double.valueOf(nota2));
+		aluno1.getDisciplina().setNota3(Double.valueOf(nota3));
+		aluno1.getDisciplina().setNota4(Double.valueOf(nota4));
 		
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setDisciplina4(disciplina4);
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);
 		
 		/*System.out.println("Nome: " + aluno1.getNome() + "\n" +
 		"Idade: " + aluno1.getIdade() + "\n" + "Data Nascimento: " + aluno1.getDataNascimento() + "\n" + 
@@ -65,7 +65,7 @@ public class PrimeiraClasseJava {
 		"Nome Mãe: " + aluno1.getNomeMae() + "\n" + "Nome Pai: " + aluno1.getNomePai() + "\n" +
 		"Data da Matricula: " + aluno1.getDataMatricula() + "\n" + "Nome da Escola: " + aluno1.getNomeEscola() + "\n" + 
 		"Série Matriculado: " + aluno1.getSerieMatriculado());*/
-		/*System.out.println("Média da Nota é: " + aluno1.getMediaNota());
+		/*System.out.println("sMédia da Nota é: " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));//Operador terminario: ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado = " + (aluno1.getAlunoAprovado2()))*/
 		
