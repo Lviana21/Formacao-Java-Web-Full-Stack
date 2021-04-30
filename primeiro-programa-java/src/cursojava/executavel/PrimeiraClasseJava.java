@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 public class PrimeiraClasseJava {
 
@@ -13,7 +14,7 @@ public class PrimeiraClasseJava {
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
-		String identidade = JOptionPane.showInputDialog("Qual a identidade do aluno?");
+		String identidade = JOptionPane.showInputDialog("Qual a RG?");
 		String numeroCpf = JOptionPane.showInputDialog("Qual o número do CPF do aluno?");
 		String nomeMae = JOptionPane.showInputDialog("Qual o nome da mãe do aluno?");
 		String nomePai = JOptionPane.showInputDialog("Qual o nome do pai do aluno?");
@@ -21,17 +22,7 @@ public class PrimeiraClasseJava {
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola do aluno?");
 		String serieMatriculado = JOptionPane.showInputDialog("Qual serie o aluno está matriculado?");
 		
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina1?");
-		String nota1 = JOptionPane.showInputDialog("Nota1?");
 		
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina2?");
-		String nota2 = JOptionPane.showInputDialog("Nota2?");
-		
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina3?");
-		String nota3 = JOptionPane.showInputDialog("Nota3?");
-		
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina4?");
-		String nota4 = JOptionPane.showInputDialog("Nota4?");
 		
 		/*2° INSTANCIAR OS OBJETOS*/
 		/* new Aluno() é uma instancia (Criação de Objeto)*/
@@ -47,24 +38,36 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeMae(nomeMae);
 		aluno1.setNomePai(nomePai);
 		aluno1.setDataMatricula(dataMatricula);
-		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serieMatriculado);
+		aluno1.setNomeEscola(nomeEscola);
+		
+	    /*Intanciado 1° Disciplina*/
+		Disciplina disciplina01 = new Disciplina();
+		disciplina01.setDisciplina("Banco de Dados");
+		disciplina01.setNota(9);
+		
+		/*Intanciado 2° Disciplina*/
+		Disciplina disciplina02 = new Disciplina();
+		disciplina02.setDisciplina("Java");
+		disciplina02.setNota(8);
+		
+		/*Intanciado 3° Disciplina*/
+		Disciplina disciplina03 = new Disciplina();
+		disciplina03.setDisciplina("Matemática");
+		disciplina03.setNota(9.5);
+		
+		/*Intanciado 4° Disciplina*/
+		Disciplina disciplina04 = new Disciplina();
+		disciplina04.setDisciplina("Negócios");
+		disciplina04.setNota(10);
+		
+		/*Colocando as Disciplinas na lista*/
+		aluno1.getDisciplinas().add(disciplina01);	
+		aluno1.getDisciplinas().add(disciplina02);
+		aluno1.getDisciplinas().add(disciplina03);
+		aluno1.getDisciplinas().add(disciplina04);		
+		
 	
-		
-		
-		
-		
-		
-		/*System.out.println("Nome: " + aluno1.getNome() + "\n" +
-		"Idade: " + aluno1.getIdade() + "\n" + "Data Nascimento: " + aluno1.getDataNascimento() + "\n" + 
-		"Registro Geral: " + aluno1.getRegistroGeral() + "\n" + "Número CPF: " + aluno1.getNumeroCpf() + "\n" +
-		"Nome Mãe: " + aluno1.getNomeMae() + "\n" + "Nome Pai: " + aluno1.getNomePai() + "\n" +
-		"Data da Matricula: " + aluno1.getDataMatricula() + "\n" + "Nome da Escola: " + aluno1.getNomeEscola() + "\n" + 
-		"Série Matriculado: " + aluno1.getSerieMatriculado());*/
-		/*System.out.println("sMédia da Nota é: " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));//Operador terminario: ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado = " + (aluno1.getAlunoAprovado2()))*/
-		
 		
 		/*================================================================================================================*/
 		/*4° PROCESSAR E TER O RESULTADO FINAL*/
@@ -72,23 +75,6 @@ public class PrimeiraClasseJava {
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
 		
-		
-		/*Equals e hashcode (Diferenciar e comparar objetos)*/
-		
-		
-		/*Aluno aluno1 = new Aluno();
-		aluno1.setNome("Luciano");
-		aluno1.setNumeroCpf("1234");
-		
-		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Luciano");
-		aluno2.setNumeroCpf("1234");
-		/*Parar comparar objetos se são iguais tem que sobrescrever o método "equals hashCode"*/
-		/*if(aluno1.equals(aluno2)) {
-			System.out.println("Alunos são iguais");
-		}else {
-			System.out.println("Alunos não são iguais");
-		}*/
 		
 		
 		
