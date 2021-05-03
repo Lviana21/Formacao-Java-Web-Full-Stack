@@ -22,16 +22,15 @@ public class Aluno {
 
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public List<Disciplina> getDisciplinas() {
-		return disciplinas;
-	}
-
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
 
-	
-	
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+
 
 	public Aluno() {/* Cria os dados na memória - Sendo padrão do Java */
 
@@ -136,11 +135,11 @@ public class Aluno {
 		
 		double somaNotas = 0.0;
 		
-		for(Disciplina disciplina : disciplinas) {
+		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
 		
-		return (somaNotas / disciplinas.size());
+		return somaNotas / disciplinas.size();
 	}
 	
 	/*Método que retorna true para aprovado e false para reprovado*/
