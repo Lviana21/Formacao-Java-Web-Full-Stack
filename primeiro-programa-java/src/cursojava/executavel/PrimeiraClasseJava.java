@@ -12,7 +12,7 @@ public class PrimeiraClasseJava {
 
 		/* 1° PASSAR OS DADOS "ENTRADA DE DADOS" */
 		String nome = JOptionPane.showInputDialog("Nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Idade do aluno?");
+		/*String idade = JOptionPane.showInputDialog("Idade do aluno?");
 		String dataNascimento = JOptionPane.showInputDialog("Data Nascimento?");
 		String identidade = JOptionPane.showInputDialog("RG?");
 		String numeroCpf = JOptionPane.showInputDialog("CPF?");
@@ -20,16 +20,16 @@ public class PrimeiraClasseJava {
 		String nomePai = JOptionPane.showInputDialog("Nome do Pai?");
 		String dataMatricula = JOptionPane.showInputDialog("Data da matricula?");
 		String nomeEscola = JOptionPane.showInputDialog("Nome da escola?");
-		String serieMatriculado = JOptionPane.showInputDialog("Serie o aluno?");
+		String serieMatriculado = JOptionPane.showInputDialog("Serie o aluno?");*/
 
 		/* 2° INSTANCIAR OS OBJETOS */
 		/* new Aluno() é uma instancia (Criação de Objeto) */
-		/* aluno1 é uma referencia para o obejto aluno */
+		/* aluno1 é uma referência para o objeto aluno */
 		Aluno aluno1 = new Aluno(); /* Aqui será João "irá receber um valor qualquer" */
 
 		/* 3° PASSAR OS VALORES QUE VEIO DA ENTRADA DE DADOS PARA O OBJETO */
 		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
+		/*aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(identidade);
 		aluno1.setNumeroCpf(numeroCpf);
@@ -37,24 +37,35 @@ public class PrimeiraClasseJava {
 		aluno1.setNomePai(nomePai);
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNomeEscola(nomeEscola);
-
+		aluno1.setNomeEscola(nomeEscola);*/
+ 
+		/*ADICIONANDO DISCIPINA UTILIZANDO LAÇO DE REPETIÇÃO*/
 		for (int pos = 1; pos <= 4; pos++) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + "?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + "?");
 
 			Disciplina disciplina = new Disciplina();
-			disciplina.setDisciplina(notaDisciplina);
+			disciplina.setDisciplina(nomeDisciplina);
 			disciplina.setNota(Double.valueOf(notaDisciplina));
 
 			aluno1.getDisciplinas().add(disciplina);
 		}
-
+		
+		/*REMOVENDO DISCIPLINA UTILIZANDO CONDIÇÃO IF */
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 
-		if (escolha == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+		if (escolha == 0) {/*SIM e Zero*/
+			
+			int continuarRemover = 0;
+			int posicao = 1;
+			
+			while (continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+				posicao++;
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
+			}
+			
 		}
 
 		/* 4° PROCESSAR E TER O RESULTADO FINAL */

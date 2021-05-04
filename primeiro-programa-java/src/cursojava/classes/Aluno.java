@@ -7,7 +7,7 @@ import java.util.List;
 public class Aluno {
 
 	/* Esses são os atributos do Aluno que representa os dados do mundo real */
-	/*Conjunto de dados*/
+	/* Conjunto de dados */
 	private String nome;
 	private int idade;
 	private String dataNascimento;
@@ -18,10 +18,9 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
 
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
-	
+
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
@@ -29,8 +28,6 @@ public class Aluno {
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-
-
 
 	public Aluno() {/* Cria os dados na memória - Sendo padrão do Java */
 
@@ -129,39 +126,43 @@ public class Aluno {
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
-	
-	/*Método que retorna a média do aluno*/
+
+	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
-		
+
 		double somaNotas = 0.0;
-		
+
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
-		
+
 		return somaNotas / disciplinas.size();
 	}
-	
-	/*Método que retorna true para aprovado e false para reprovado*/
+
+	/* Método que retorna true para aprovado e false para reprovado */
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
 		if (media >= 7) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
-	
+
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
-		if (media >= 7) {
-			return "Aluno aprovado";
-		}else {
-			return "Aluno reprovado";
+
+		if (media >= 5) {
+			if (media >= 7) {
+				return "Aluno Aprovado";
+			} else {
+				return "Aluno de Recuperação";
+			}
+		} else {
+			return "Aluno Reprovado";
 		}
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
@@ -170,8 +171,6 @@ public class Aluno {
 				+ serieMatriculado + "]";
 	}
 
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -202,9 +201,5 @@ public class Aluno {
 			return false;
 		return true;
 	}
-
-	
-	
-	
 
 }
