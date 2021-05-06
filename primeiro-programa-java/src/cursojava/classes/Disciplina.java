@@ -2,7 +2,7 @@ package cursojava.classes;
 
 /*Essa classe Disciplina servirá para todos os objetos e instancias de notas e materias*/
 public class Disciplina {
-	
+
 	private double nota;
 	private String disciplina;
 
