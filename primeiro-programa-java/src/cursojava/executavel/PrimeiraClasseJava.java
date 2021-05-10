@@ -76,35 +76,66 @@ public class PrimeiraClasseJava {
 			}
 
 			alunos.add(aluno1);
+			
 		}
 
 		/* 4° PROCESSAR E TER O RESULTADO FINAL */
-		for (Aluno aluno : alunos) {
-			/* Encontrando aluno na lista */
-			if (aluno.getNome().equalsIgnoreCase("Luciano")) {
-				alunos.remove(aluno);
-				break;
-			} else {
-				System.out.println(aluno.toString()); /* Descrição do objeto na memória */
-				System.out.println("Média do aluno = " + aluno.getMediaNota());
-				System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-				System.out.println(
-						"-------------------------------------------------------------------------------------------");
-			}
 
-		}
-		/*Percorrendo Lista de alunos que sobrarão*/
-		for (Aluno aluno : alunos) {
-			System.out.println("Alunos que sobraram na lista:");
-			System.out.println(aluno.getNome());
-			System.out.println("Suas matérias são:");
+		for (int pos = 0; pos < alunos.size(); pos++) {
+
+			Aluno aluno = alunos.get(pos);
+
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("Média do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
 			
-			/*Percorrendo Lista de notas*/
-			for (Disciplina disciplina : aluno.getDisciplinas()) {
-				System.out.println(disciplina.getDisciplina());
+
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println("Materia = " + disc.getDisciplina() + " Nota = " + disc.getNota());
 			}
 
+			/*
+			 * for (Disciplina disc : aluno.getDisciplinas()) {
+			 * System.out.println("Materia = " + disc.getDisciplina() + " Nota = " +
+			 * disc.getNota()); }
+			 */
+			System.out.println("-----------------------------------------------------------------------------");
 		}
+
+		// MINUTO 09:45
+		/*
+		 * for (Aluno aluno : alunos) { /*Encontrando aluno na lista
+		 */
+		/*
+		 * if (aluno.getNome().equalsIgnoreCase("Luciano")) { alunos.remove(aluno);
+		 * break; } else {
+		 */
+		/* System.out.println(aluno.toString()); *//* Descrição do objeto na memória */
+		/*
+		 * System.out.println("Média do aluno = " + aluno.getMediaNota());
+		 * System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+		 * System.out.println(
+		 * "-------------------------------------------------------------------------------------------"
+		 * ); }
+		 * 
+		 * }
+		 */
+		/* Percorrendo Lista de alunos que sobrarão */
+		/*
+		 * for (Aluno aluno : alunos) {
+		 * System.out.println("Alunos que sobraram na lista:");
+		 * System.out.println(aluno.getNome());
+		 * System.out.println("Suas matérias são:");
+		 */
+
+		/* Percorrendo Lista de notas */
+		/*
+		 * for (Disciplina disciplina : aluno.getDisciplinas()) {
+		 * System.out.println(disciplina.getDisciplina()); }
+		 * 
+		 * }
+		 */
 
 	}
 }
