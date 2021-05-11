@@ -46,8 +46,8 @@ public class PrimeiraClasseJava {
 			 * aluno1.setNomeEscola(nomeEscola);
 			 */
 
-			/* ADICIONANDO DISCIPINA UTILIZANDO LAÇO DE REPETIÇÃO */
-			for (int pos = 1; pos <= 4; pos++) {
+			/* ADICIONANDO DISCIPLINA UTILIZANDO LAÇO DE REPETIÇÃO */
+			for (int pos = 1; pos <= 1; pos++) {
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + "?");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + "?");
 
@@ -76,7 +76,7 @@ public class PrimeiraClasseJava {
 			}
 
 			alunos.add(aluno1);
-			
+
 		}
 
 		/* 4° PROCESSAR E TER O RESULTADO FINAL */
@@ -85,10 +85,24 @@ public class PrimeiraClasseJava {
 
 			Aluno aluno = alunos.get(pos);
 
+			if (aluno.getNome().equalsIgnoreCase("Luciano")) {
+				Aluno trocar = new Aluno();
+				trocar.setNome("Aluno foi trocado");
+
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("Matemática");
+				disciplina.setNota(9.6);
+
+				trocar.getDisciplinas().add(disciplina);
+
+				alunos.set(pos, trocar);
+				aluno = alunos.get(pos);
+
+			}
+
 			System.out.println("Aluno = " + aluno.getNome());
 			System.out.println("Média do aluno = " + aluno.getMediaNota());
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-			
 
 			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
 				Disciplina disc = aluno.getDisciplinas().get(posd);
