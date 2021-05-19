@@ -1,4 +1,4 @@
-package princio.responsabilidade;
+package principio.responsabilidade;
 
 public class TesteConta {
 
