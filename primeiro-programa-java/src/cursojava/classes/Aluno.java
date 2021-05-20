@@ -197,4 +197,20 @@ public class Aluno extends Pessoa {
 		return true;
 	}
 
+	@Override /* Indentifica método sobreescrito */
+	public boolean pessoaMaiorIdade() {
+
+		return idade >= 21;
+	}
+
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade() ? "Obaa aluno é maior de idade" : "Ixii você é menor de idade";
+	}
+
+	@Override
+	public double salario() {
+
+		return 1500.90;
+	}
+
 }
