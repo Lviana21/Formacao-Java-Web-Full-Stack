@@ -10,13 +10,13 @@ public class TestandoClassesFilhas {
 	public static void main(String[] args) {
 
 		Aluno aluno = new Aluno();
-		aluno.setNome("Luciano Viana");
-		aluno.setNomeEscola("LV Capital Trading");
+		aluno.setNome("Luciano");
+		aluno.setNomeEscola("JDev");
 		aluno.setIdade(21);
 
 		Diretor diretor = new Diretor();
 		diretor.setRegistroGeral("aesra234243");
-		diretor.setNome("Luciano");
+		diretor.setNome("Carlos");
 		diretor.setIdade(50);
 
 		Secretario secretario = new Secretario();
