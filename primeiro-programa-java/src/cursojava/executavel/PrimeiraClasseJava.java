@@ -19,9 +19,12 @@ public class PrimeiraClasseJava {
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
-		
-	
-		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar contrato para autorizar somente que realmente tem o contrato 100% legitimo*/
+
+		if (new FuncaoAutenticacao(new Diretor(login, senha))
+				.autenticar()) {/*
+								 * Vou travar contrato para autorizar somente que realmente tem o contrato 100%
+								 * legitimo
+								 */
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 

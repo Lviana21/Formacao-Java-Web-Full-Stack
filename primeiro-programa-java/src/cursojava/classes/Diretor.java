@@ -11,16 +11,15 @@ public class Diretor extends Pessoa implements PermitirAcesso {
 
 	private String login;
 	private String senha;
-	
+
 	public Diretor(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
 	}
-	
+
 	public Diretor() {
 	}
-	
-	
+
 	public String getRegistroEducacao() {
 		return registroEducacao;
 	}
@@ -56,7 +55,7 @@ public class Diretor extends Pessoa implements PermitirAcesso {
 
 		return 3900.78;
 	}
-	
+
 	@Override
 	public boolean autenticar(String login, String senha) {
 		this.login = login;
