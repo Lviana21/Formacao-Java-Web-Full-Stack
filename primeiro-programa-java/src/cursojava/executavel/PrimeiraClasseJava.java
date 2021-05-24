@@ -3,9 +3,13 @@ package cursojava.executavel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import javax.swing.JOptionPane;
+
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
@@ -15,8 +19,9 @@ public class PrimeiraClasseJava {
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
-
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		
+	
+		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar contrato para autorizar somente que realmente tem o contrato 100% legitimo*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -137,7 +142,7 @@ public class PrimeiraClasseJava {
 						+ " com média de = " + aluno.getMediaNota());
 			}
 		} else {
-			JOptionPane.showMessageDialog(null, "Login ou Senha incorretos!!");
+			JOptionPane.showMessageDialog(null, "Acesso não permitido!!");
 		}
 
 	}
