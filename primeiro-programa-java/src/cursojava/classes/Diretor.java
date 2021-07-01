@@ -65,7 +65,7 @@ public class Diretor extends Pessoa implements PermitirAcesso {
 
 	@Override
 	public boolean autenticar() {
-		return login.equals("Luciano") && senha.equals("123");
+		return login.equalsIgnoreCase("Luciano") && senha.equals("123");
 	}
 
 }
