@@ -28,7 +28,7 @@ public class PrimeiraClasseJava {
 									 * legitimo
 									 */
 
-				List<Aluno> alunos = new ArrayList<Aluno>();
+				List<Aluno> alunos = null; //new ArrayList<Aluno>();
 
 				/* HashMap é uma forma de carregar dados e recuperar eles atravez de um valor */
 				HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -151,7 +151,24 @@ public class PrimeiraClasseJava {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace(); /* Imprimi erro no console Java */
+
+			StringBuilder saida = new StringBuilder();
+
+			/* Imprimi erro no console Java */
+			e.printStackTrace();
+
+			/* Mensagem do erro ou causa */
+			System.out.println(" Mensagem: " + e.getMessage());
+
+			for (int pos = 0; pos < e.getStackTrace().length; pos++) {
+
+				saida.append("\n Classe de erro : " + e.getStackTrace()[pos].getClassName());
+				saida.append("\n Método de erro : " + e.getStackTrace()[pos].getMethodName());
+				saida.append("\n Linha de erro : " + e.getStackTrace()[pos].getLineNumber());
+				saida.append("\n Classe de erro : " + e.getClass().getName());
+
+			}
+
 			JOptionPane.showMessageDialog(null, "Erro ao processar notas");
 		}
 
