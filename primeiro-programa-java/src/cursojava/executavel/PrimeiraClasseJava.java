@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -19,9 +20,10 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 
 		try {
-			
-			new File("arquivo.txt");
-			
+
+			File fil = new File("c://arquivod.txt");
+			Scanner scanner = new Scanner(fil);
+
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
 
@@ -173,9 +175,15 @@ public class PrimeiraClasseJava {
 			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
 		} catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "Opa um null pointer exception: " + e.getClass());
-		}catch (Exception e) {
-			e.printStackTrace(); // Exceção genérica
+		} catch (Exception e) {
+			e.printStackTrace(); // Exceção genérica - Captura todas as exceções que não prevemos
+			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
+		} finally {/* Sempre é executado ocorrendo erro ou não. */
+			/*
+			 * Porque? É sempre usado quando se precisa executar um processo acontecendo
+			 * erro ou não no sistema
+			 */
+			JOptionPane.showMessageDialog(null, "Você está aprendendo Java - 1% melhor a cada dia");
 		}
-
 	}
 }
