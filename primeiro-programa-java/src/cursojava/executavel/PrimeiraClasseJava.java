@@ -1,5 +1,6 @@
 package cursojava.executavel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +19,9 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 
 		try {
-
+			
+			new File("arquivo.txt");
+			
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
 
@@ -44,10 +47,10 @@ public class PrimeiraClasseJava {
 
 					/* 1° PASSAR OS DADOS "ENTRADA DE DADOS" */
 					String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "?");
+					String idade = JOptionPane.showInputDialog("Idade do aluno?");
 					/*
-					 * String idade = JOptionPane.showInputDialog("Idade do aluno?"); String
-					 * dataNascimento = JOptionPane.showInputDialog("Data Nascimento?"); String
-					 * identidade = JOptionPane.showInputDialog("RG?"); String numeroCpf =
+					 * String dataNascimento = JOptionPane.showInputDialog("Data Nascimento?");
+					 * String identidade = JOptionPane.showInputDialog("RG?"); String numeroCpf =
 					 * JOptionPane.showInputDialog("CPF?"); String nomeMae =
 					 * JOptionPane.showInputDialog("Nome mãe?"); String nomePai =
 					 * JOptionPane.showInputDialog("Nome do Pai?"); String dataMatricula =
@@ -63,8 +66,8 @@ public class PrimeiraClasseJava {
 
 					/* 3° PASSAR OS VALORES QUE VEIO DA ENTRADA DE DADOS PARA O OBJETO */
 					aluno1.setNome(nome);
+					aluno1.setIdade(Integer.valueOf(idade));
 					/*
-					 * aluno1.setIdade(Integer.valueOf(idade));
 					 * aluno1.setDataNascimento(dataNascimento);
 					 * aluno1.setRegistroGeral(identidade); aluno1.setNumeroCpf(numeroCpf);
 					 * aluno1.setNomeMae(nomeMae); aluno1.setNomePai(nomePai);
@@ -150,7 +153,7 @@ public class PrimeiraClasseJava {
 				JOptionPane.showMessageDialog(null, "Acesso não permitido!!");
 			}
 
-		} catch (Exception e) {
+		} catch (NumberFormatException e) {
 
 			StringBuilder saida = new StringBuilder();
 			/* Imprimi erro no console Java */
@@ -167,7 +170,11 @@ public class PrimeiraClasseJava {
 				saida.append("\n Class: " + e.getClass().getName());
 			}
 
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
+		} catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "Opa um null pointer exception: " + e.getClass());
+		}catch (Exception e) {
+			e.printStackTrace(); // Exceção genérica
 		}
 
 	}
