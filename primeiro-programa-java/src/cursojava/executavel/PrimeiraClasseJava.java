@@ -156,7 +156,7 @@ public class PrimeiraClasseJava {
 				JOptionPane.showMessageDialog(null, "Acesso não permitido!!");
 			}
 
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {
 
 			StringBuilder saida = new StringBuilder();
 			/* Imprimi erro no console Java */
@@ -174,11 +174,7 @@ public class PrimeiraClasseJava {
 			}
 
 			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
-		} catch (NullPointerException e) {
-			JOptionPane.showMessageDialog(null, "Opa um null pointer exception: " + e.getClass());
-		} catch (/*ExcecaoProcessarNota*/ FileNotFoundException e) {
-			e.printStackTrace(); // Exceção genérica - Captura todas as exceções que não prevemos
-			JOptionPane.showMessageDialog(null, "Erro da exceção customizada: " + e.getClass().getName());
+			
 		} finally {/* Sempre é executado ocorrendo erro ou não. */
 			/*
 			 * Porque? É sempre usado quando se precisa executar um processo acontecendo
@@ -192,7 +188,7 @@ public class PrimeiraClasseJava {
 	
 	public static void lerArquivo() throws FileNotFoundException {
 		
-		File fil = new File("c://arquivod.txt");
+		File fil = new File("c://arquivo.txt");
 		Scanner scanner = new Scanner(fil);
 	}
 	
