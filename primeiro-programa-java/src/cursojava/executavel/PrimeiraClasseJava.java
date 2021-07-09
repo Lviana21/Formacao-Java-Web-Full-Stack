@@ -22,7 +22,7 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 
 		try {
-			
+
 			lerArquivo();
 
 			String login = JOptionPane.showInputDialog("Informe o login");
@@ -174,34 +174,31 @@ public class PrimeiraClasseJava {
 			}
 
 			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
-			
+
 		} finally {/* Sempre é executado ocorrendo erro ou não. */
 			/*
 			 * Porque? É sempre usado quando se precisa executar um processo acontecendo
 			 * erro ou não no sistema
 			 */
-			JOptionPane.showMessageDialog(null, "Você está aprendendo Java - 1% melhor a cada dia");
+			JOptionPane.showMessageDialog(null, "Parabéns!! Você está aprendendo Java - 1% melhor a cada dia");
 		}
 	}
 
-	//Excecao Simples
-	
+	// Excecao Simples
+
 	public static void lerArquivo() throws FileNotFoundException {
-		
+
 		File fil = new File("c://arquivo.txt");
 		Scanner scanner = new Scanner(fil);
 	}
-	
-	//Excecao Customizada
-	/*public static void lerArquivo() throws ExcecaoProcessarNota {
 
-		try {
-			File fil = new File("c://arquivod.txt");
-			Scanner scanner = new Scanner(fil);
-		} catch (FileNotFoundException e) {
-			throw new ExcecaoProcessarNota(e.getMessage());
-		}
-	}*/
+	// Excecao Customizada
+	/*
+	 * public static void lerArquivo() throws ExcecaoProcessarNota {
+	 * 
+	 * try { File fil = new File("c://arquivod.txt"); Scanner scanner = new
+	 * Scanner(fil); } catch (FileNotFoundException e) { throw new
+	 * ExcecaoProcessarNota(e.getMessage()); } }
+	 */
 
 }
-
