@@ -24,6 +24,7 @@ public class ArryVetor {
 			System.out.println("Nota " + (pos + 1) + " = " + notas[pos]);
 		}
 
+		
 	}
 
 }
