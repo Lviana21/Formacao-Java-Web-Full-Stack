@@ -1,25 +1,29 @@
 package cursojava.executavel;
 
+import javax.swing.JOptionPane;
+
 public class ArryVetor {
-	
-	//Usando para executar códigos
+
+	// Usando para executar códigos
 	public static void main(String[] args) {
-		
-		/*Array pode ser de todos os tipos de dados e objetivos também*/
-		/*Array sempre deve ter a quantidade de posições definidas*/
-		
-		double[] notas = new double[5];
-		
-		/*Atribuir valor nas posições do arrays*/
-		
-		notas[0] = 7.4;
-		notas[1] = 8.5;
-		notas[2] = 5.1;
-		notas[3] = 9.9;
-		notas[4] = 10;
-		
-		System.out.println(notas);
-		
+
+		/* Array pode ser de todos os tipos de dados e objetos também */
+
+		String posicoes = JOptionPane.showInputDialog("Quantas notas o Arry deve ter?");
+
+		/* Array sempre deve ter a quantidade de posições definidas */
+
+		double[] notas = new double[Integer.parseInt(posicoes)];
+
+		for (int pos = 0; pos < notas.length; pos++) {
+			String valor = JOptionPane.showInputDialog("Qual o valor Nota = " + (pos+1));
+			notas[pos] = Double.valueOf(valor);
+		}
+
+		for (int pos = 0; pos < notas.length; pos++) {
+			System.out.println("Nota " + (pos + 1) + " = " + notas[pos]);
+		}
+
 	}
 
 }
