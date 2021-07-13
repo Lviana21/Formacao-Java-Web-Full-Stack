@@ -2,7 +2,7 @@ package cursojava.executavel;
 
 import javax.swing.JOptionPane;
 
-public class ArryVetor {
+public class ArryVetorTeste {
 
 	// Usando para executar códigos
 	public static void main(String[] args) {
