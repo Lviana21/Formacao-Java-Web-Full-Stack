@@ -32,6 +32,21 @@ public class ArryVetor {
 
 		aluno.getDisciplinas().add(disciplina2);
 
+		System.out.println("------------------------Aluno----------------------");
+		System.out
+				.println("Nome do aluno : " + aluno.getNome() + "\n" + "Inscrito na Escola : " + aluno.getNomeEscola());
+		System.out.println("----------------Disciplina do Aluno-----------------");
+
+		for (Disciplina d : aluno.getDisciplinas()) {
+
+			System.out.println("Disciplina : " + d.getDisciplina());
+			System.out.println("As Notas da da disciplina é: ");
+
+			for (int pos = 0; pos < d.getNota().length; pos++) {
+				System.out.println("Nota " + (pos + 1) + " é igual: " + d.getNota()[pos]);
+			}
+
+		}
 	}
 
 }
