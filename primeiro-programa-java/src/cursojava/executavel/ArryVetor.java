@@ -22,14 +22,12 @@ public class ArryVetor {
 		Disciplina disciplina = new Disciplina();
 		disciplina.setDisciplina("Curso de Java");
 		disciplina.setNota(notas);
-
 		aluno.getDisciplinas().add(disciplina);
 
 		// Disciplina 02
 		Disciplina disciplina2 = new Disciplina();
 		disciplina2.setDisciplina("Lógia de Programação");
 		disciplina2.setNota(notasLogica);
-
 		aluno.getDisciplinas().add(disciplina2);
 
 		System.out.println("------------------------Aluno----------------------");
