@@ -9,8 +9,8 @@ public class ArryVetor {
 	public static void main(String[] args) {
 
 		// Arry de Notas
-		double[] notas = { 8.8, 9.7, 7.6, 6.8 };
-		double[] notasLogica = { 9.5, 7, 8.2, 7.9 };
+		double[] notas = { 8.8, 9.2, 7.6, 6.8 };
+		double[] notasLogica = { 9.8, 7, 8.2, 7.9 };
 
 		/* Criação dos alunos */
 		Aluno aluno = new Aluno();
@@ -30,7 +30,6 @@ public class ArryVetor {
 		disciplina2.setNota(notasLogica);
 		aluno.getDisciplinas().add(disciplina2);
 
-		System.out.println("------------------------Aluno----------------------");
 		System.out
 				.println("Nome do aluno : " + aluno.getNome() + "\n" + "Inscrito na Escola : " + aluno.getNomeEscola());
 		System.out.println("----------------Disciplina do Aluno-----------------");
@@ -40,10 +39,20 @@ public class ArryVetor {
 			System.out.println("Disciplina : " + d.getDisciplina());
 			System.out.println("As Notas da da disciplina é: ");
 
+			double notaMax = 0.0;
 			for (int pos = 0; pos < d.getNota().length; pos++) {
 				System.out.println("Nota " + (pos + 1) + " é igual: " + d.getNota()[pos]);
-			}
 
+				// Descobrindo um maior valor dentro de um Arry
+				if (pos == 0) {
+					notaMax = d.getNota()[pos];
+				} else {
+					if (d.getNota()[pos] > notaMax) {
+						notaMax = d.getNota()[pos];
+					}
+				}
+			}
+			System.out.println("A maior nota da Disciplina: " + d.getDisciplina() + " é de valor: " + notaMax);
 		}
 	}
 
