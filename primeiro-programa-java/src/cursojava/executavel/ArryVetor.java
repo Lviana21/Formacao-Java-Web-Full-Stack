@@ -13,6 +13,7 @@ public class ArryVetor {
 		double[] notasLogica = { 9.8, 7, 8.2, 7.9 };
 
 		/* Criação dos alunos */
+		// Aluno 01
 		Aluno aluno = new Aluno();
 		aluno.setNome("Luciano");
 		aluno.setNomeEscola("Unitri");
@@ -30,31 +31,66 @@ public class ArryVetor {
 		disciplina2.setNota(notasLogica);
 		aluno.getDisciplinas().add(disciplina2);
 
-		System.out
-				.println("Nome do aluno : " + aluno.getNome() + "\n" + "Inscrito na Escola : " + aluno.getNomeEscola());
-		System.out.println("----------------Disciplina do Aluno-----------------");
+		// -------------------------------------------------------------------------------
+		/* Criação dos alunos */
+		// Aluno 02
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Carlos");
+		aluno2.setNomeEscola("UFU");
 
-		for (Disciplina d : aluno.getDisciplinas()) {
+		/* Criação da disciplina */
+		// Disciplina 01
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Sistemas");
+		disciplina3.setNota(notas);
+		aluno2.getDisciplinas().add(disciplina3);
 
-			System.out.println("Disciplina : " + d.getDisciplina());
-			System.out.println("As Notas da da disciplina é: ");
+		// Disciplina 02
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Estrutura de Dados");
+		disciplina4.setNota(notasLogica);
+		aluno2.getDisciplinas().add(disciplina4);
 
-			double notaMax = 0.0;
-			for (int pos = 0; pos < d.getNota().length; pos++) {
-				System.out.println("Nota " + (pos + 1) + " é igual: " + d.getNota()[pos]);
+		// -------------------------------------------------------------------
+		// Array de Alunos
+		Aluno[] arrayDeAlunos = new Aluno[2];
+		arrayDeAlunos[0] = aluno;
+		arrayDeAlunos[1] = aluno2;
 
-				// Descobrindo um menor valor dentro de um Arry
-				if (pos == 0) {
-					notaMax = d.getNota()[pos];
-				} else {
-					if (d.getNota()[pos] < notaMax) {
-						notaMax = d.getNota()[pos];
-					}
+		for (int pos = 0; pos < arrayDeAlunos.length; pos++) {
+			System.out.println("Nome do " + (pos + 1) + "º Aluno: " + arrayDeAlunos[pos].getNome());
+
+			for (Disciplina discip : arrayDeAlunos[pos].getDisciplinas()) {
+				System.out.println("Disciplina: " + discip.getDisciplina());
+
+				for (int posNota = 0; posNota < discip.getNota().length; posNota++) {
+					System.out.println("Nota " + (posNota + 1) + ": " + discip.getNota()[posNota]);
 				}
 
 			}
-			System.out.println("A menor nota da Disciplina: " + d.getDisciplina() + " é de valor: " + notaMax);
+			System.out.println("\n");
 		}
+
+		/*
+		 * System.out .println("Nome do aluno : " + aluno.getNome() + "\n" +
+		 * "Inscrito na Escola : " + aluno.getNomeEscola());
+		 * System.out.println("----------------Disciplina do Aluno-----------------");
+		 * 
+		 * for (Disciplina d : aluno.getDisciplinas()) {
+		 * 
+		 * System.out.println("Disciplina : " + d.getDisciplina());
+		 * System.out.println("As Notas da da disciplina é: ");
+		 * 
+		 * double notaMax = 0.0; for (int pos = 0; pos < d.getNota().length; pos++) {
+		 * System.out.println("Nota " + (pos + 1) + " é igual: " + d.getNota()[pos]);
+		 * 
+		 * // Descobrindo um menor valor dentro de um Arry if (pos == 0) { notaMax =
+		 * d.getNota()[pos]; } else { if (d.getNota()[pos] < notaMax) { notaMax =
+		 * d.getNota()[pos]; } }
+		 * 
+		 * } System.out.println("A menor nota da Disciplina: " + d.getDisciplina() +
+		 * " é de valor: " + notaMax); }
+		 */
 	}
 
 }
