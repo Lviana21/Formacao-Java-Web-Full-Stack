@@ -43,16 +43,17 @@ public class ArryVetor {
 			for (int pos = 0; pos < d.getNota().length; pos++) {
 				System.out.println("Nota " + (pos + 1) + " é igual: " + d.getNota()[pos]);
 
-				// Descobrindo um maior valor dentro de um Arry
+				// Descobrindo um menor valor dentro de um Arry
 				if (pos == 0) {
 					notaMax = d.getNota()[pos];
 				} else {
-					if (d.getNota()[pos] > notaMax) {
+					if (d.getNota()[pos] < notaMax) {
 						notaMax = d.getNota()[pos];
 					}
 				}
+
 			}
-			System.out.println("A maior nota da Disciplina: " + d.getDisciplina() + " é de valor: " + notaMax);
+			System.out.println("A menor nota da Disciplina: " + d.getDisciplina() + " é de valor: " + notaMax);
 		}
 	}
 
