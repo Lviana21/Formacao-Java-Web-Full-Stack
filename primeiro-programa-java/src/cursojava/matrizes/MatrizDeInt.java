@@ -1,4 +1,4 @@
-package cursojava.executavel;
+package cursojava.matrizes;
 
 public class MatrizDeInt {
 
