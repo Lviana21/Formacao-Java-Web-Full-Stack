@@ -77,7 +77,7 @@ public class TelaTimeThread extends JDialog {
 	public TelaTimeThread() { /* Executa o que tiver dentro no momento da abertura ou execução */
 		// Bloco de configurações iniciais
 		setTitle("Minha tela de time com Thread"); // Titulo
-		setSize(new Dimension(240, 240)); // Dimensão altura e largura
+		setSize(new Dimension(240, 240)); // Dimensão largura e altura
 		setLocationRelativeTo(null); // Centralizando a tela
 		setResizable(false); // Travar a tela para não mudar o tamanho manual
 		/* Primeira parte concluída */
@@ -87,7 +87,7 @@ public class TelaTimeThread extends JDialog {
 		gridBagConstraints.gridx = 0;// Coluna
 		gridBagConstraints.gridy = 0;// Linha
 		gridBagConstraints.gridwidth = 2; //largura
-		gridBagConstraints.insets = new Insets(5, 10, 5, 5);
+		gridBagConstraints.insets = new Insets(2, 10, 8, 6);// top, esquerda, baixo, direita
 		gridBagConstraints.anchor = GridBagConstraints.WEST; //Alinhar a esquerda
 		
 		
