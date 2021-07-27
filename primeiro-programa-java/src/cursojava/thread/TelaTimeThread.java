@@ -90,7 +90,7 @@ public class TelaTimeThread extends JDialog {
 		gridBagConstraints.gridy = 0;// Colunas
 		gridBagConstraints.gridwidth = 2; // Largura - Quantidades de colunas
 		gridBagConstraints.insets = new Insets(2, 10, 8, 6);// top, esquerda, baixo, direita
-		gridBagConstraints.anchor = GridBagConstraints.WEST; // Alinhar a esquerda
+		gridBagConstraints.anchor = GridBagConstraints.WEST; // Posicionamento: alinhar a esquerda
 
 		descricaoHora.setPreferredSize(new Dimension(200, 25));
 		jPanel.add(descricaoHora, gridBagConstraints);
