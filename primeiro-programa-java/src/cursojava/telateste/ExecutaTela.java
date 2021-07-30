@@ -6,5 +6,4 @@ public class ExecutaTela {
 		
 		TelaDeTempo telaDeTempo = new TelaDeTempo();
 	}
-
 }
