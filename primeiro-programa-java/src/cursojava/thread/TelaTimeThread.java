@@ -85,25 +85,25 @@ public class TelaTimeThread extends JDialog {
 		/* Controlador de posicionamento de componentes */
 		GridBagConstraints gridBagConstraints = new GridBagConstraints();
 		// Painel X e Y: https://prnt.sc/1gk2rvx
-		gridBagConstraints.gridx = 0;// Linhas
-		gridBagConstraints.gridy = 0;// Colunas
+		gridBagConstraints.gridx = 0;// Colunas
+		gridBagConstraints.gridy = 0;// Linhas
 		gridBagConstraints.gridwidth = 2; // Largura - Quantidades de colunas
-		gridBagConstraints.insets = new Insets(2, 10, 8, 6);// top, esquerda, baixo, direita
+		gridBagConstraints.insets = new Insets(2, 10, 8, 6);// ajustar espaçamento "top, esquerda, baixo, direita"
 		gridBagConstraints.anchor = GridBagConstraints.WEST; // Posicionamento: alinhar a esquerda
 
-		descricaoHora.setPreferredSize(new Dimension(200, 25));
+		descricaoHora.setPreferredSize(new Dimension(200, 25));//JLabel
 		jPanel.add(descricaoHora, gridBagConstraints);
 
-		mostraTempo.setPreferredSize(new Dimension(200, 25));
+		mostraTempo.setPreferredSize(new Dimension(200, 25));//JTextField
 		gridBagConstraints.gridy++;
 		mostraTempo.setEditable(false);
 		jPanel.add(mostraTempo, gridBagConstraints);
 
-		descricaoHora2.setPreferredSize(new Dimension(200, 25));
+		descricaoHora2.setPreferredSize(new Dimension(200, 25));//JLabel
 		gridBagConstraints.gridy++;
 		jPanel.add(descricaoHora2, gridBagConstraints);
 
-		mostraTempo2.setPreferredSize(new Dimension(200, 25));
+		mostraTempo2.setPreferredSize(new Dimension(200, 25));//JTextField
 		gridBagConstraints.gridy++;
 		mostraTempo2.setEditable(false);
 		jPanel.add(mostraTempo2, gridBagConstraints);
@@ -148,8 +148,6 @@ public class TelaTimeThread extends JDialog {
 				jButton2.setEnabled(false);
 			}
 		});
-
-		jButton2.setEnabled(false);
 
 		add(jPanel, BorderLayout.WEST);
 		// Sempre será o último comando a ser executado
