@@ -33,6 +33,7 @@ public class TelaTimeThread extends JDialog {
 	private JButton jButton = new JButton("Gerar Lote");
 	private JButton jButton2 = new JButton("Stop");
 
+	// Execução de processamento da Class ImplementacaoFilaThread
 	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
 
 	public TelaTimeThread() { /* Executa o que tiver dentro no momento da abertura ou execução */
@@ -90,7 +91,8 @@ public class TelaTimeThread extends JDialog {
 					fila.start();
 				}
 
-				for (int qtd = 1; qtd <= 10; qtd++) {/* Simulando 100 envios em massa */
+				for (int qtd = 1; qtd <= 100; qtd++) {/* Simulando 100 envios em massa */
+
 					ObjetoFilaThread filaThread = new ObjetoFilaThread();
 					filaThread.setNome(mostraTempo.getText());
 					filaThread.setEmail(mostraTempo2.getText() + " - " + qtd);

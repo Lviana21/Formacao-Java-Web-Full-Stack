@@ -15,9 +15,7 @@ public class ImplementacaoFilaThread extends Thread {
 	public void run() {
 
 		System.out.println("Fila rodando");
-
 		
-
 		while (true) {
 			
 			Iterator iteracao = pilha_fila.iterator();
