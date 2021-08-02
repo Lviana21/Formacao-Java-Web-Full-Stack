@@ -33,10 +33,7 @@ public class TelaTimeThread extends JDialog {
 	private JButton jButton = new JButton("Gerar Lote");
 	private JButton jButton2 = new JButton("Stop");
 
-	
 	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
-
-	
 
 	public TelaTimeThread() { /* Executa o que tiver dentro no momento da abertura ou execução */
 		// Bloco de configurações iniciais
@@ -55,18 +52,18 @@ public class TelaTimeThread extends JDialog {
 		gridBagConstraints.insets = new Insets(2, 10, 8, 6);// ajustar espaçamento "top, esquerda, baixo, direita"
 		gridBagConstraints.anchor = GridBagConstraints.WEST; // Posicionamento: alinhar a esquerda
 
-		descricaoHora.setPreferredSize(new Dimension(200, 25));//JLabel
+		descricaoHora.setPreferredSize(new Dimension(200, 25));// JLabel
 		jPanel.add(descricaoHora, gridBagConstraints);
 
-		mostraTempo.setPreferredSize(new Dimension(200, 25));//JTextField
+		mostraTempo.setPreferredSize(new Dimension(200, 25));// JTextField
 		gridBagConstraints.gridy++;
 		jPanel.add(mostraTempo, gridBagConstraints);
 
-		descricaoHora2.setPreferredSize(new Dimension(200, 25));//JLabel
+		descricaoHora2.setPreferredSize(new Dimension(200, 25));// JLabel
 		gridBagConstraints.gridy++;
 		jPanel.add(descricaoHora2, gridBagConstraints);
 
-		mostraTempo2.setPreferredSize(new Dimension(200, 25));//JTextField
+		mostraTempo2.setPreferredSize(new Dimension(200, 25));// JTextField
 		gridBagConstraints.gridy++;
 		jPanel.add(mostraTempo2, gridBagConstraints);
 
@@ -87,13 +84,19 @@ public class TelaTimeThread extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {// Executa o clique no botão
-				
-				ObjetoFilaThread filaThread = new ObjetoFilaThread();
-				filaThread.setNome(mostraTempo.getText());
-				filaThread.setEmail(mostraTempo2.getText());
-				
-				fila.add(filaThread);
 
+				if (fila == null) {
+					fila = new ImplementacaoFilaThread();
+					fila.start();
+				}
+
+				for (int qtd = 1; qtd <= 10; qtd++) {/* Simulando 100 envios em massa */
+					ObjetoFilaThread filaThread = new ObjetoFilaThread();
+					filaThread.setNome(mostraTempo.getText());
+					filaThread.setEmail(mostraTempo2.getText() + " - " + qtd);
+
+					fila.add(filaThread);
+				}
 			}
 		});
 
@@ -101,9 +104,9 @@ public class TelaTimeThread extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
 
-				
+				fila.stop();
+				fila = null;
 			}
 		});
 
