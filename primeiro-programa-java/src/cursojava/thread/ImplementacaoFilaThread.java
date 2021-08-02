@@ -13,39 +13,47 @@ public class ImplementacaoFilaThread extends Thread {
 
 	@Override
 	public void run() {
-		Iterator iteracao = pilha_fila.iterator();
 
-		synchronized (iteracao) { // Bloquear o acesso a esta lista por outros processos
+		System.out.println("Fila rodando");
 
-			while (iteracao.hasNext()) {// Enquanto conter dados na lista irá processar
+		
 
-				ObjetoFilaThread processar = (ObjetoFilaThread) iteracao.next(); // Pega o objeto atual
+		while (true) {
+			
+			Iterator iteracao = pilha_fila.iterator();
+			synchronized (iteracao) { // Bloquear o acesso a esta lista por outros processos
 
-				// Processar 10 mil notas fiscal
-				// Gerar uma lista enorme de PDF
-				// Gerar um envio em massa de email
-				System.out.println("--------------------------------");
+				while (iteracao.hasNext()) {// Enquanto conter dados na lista irá processar
 
-				System.out.println(processar.getEmail());
-				System.out.println(processar.getNome());
+					ObjetoFilaThread processar = (ObjetoFilaThread) iteracao.next(); // Pega o objeto atual
 
-				iteracao.remove();
+					// Processar 10 mil notas fiscal
+					// Gerar uma lista enorme de PDF
+					// Gerar um envio em massa de email
+					System.out.println("--------------------------------");
 
-				try {
-					Thread.sleep(100); // Dar um tempo pra descarga de memória
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println(processar.getEmail());
+					System.out.println(processar.getNome());
+
+					iteracao.remove();
+
+					try {
+						Thread.sleep(100); // Dar um tempo pra descarga de memória
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
+
 			}
 
-		}
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 }
