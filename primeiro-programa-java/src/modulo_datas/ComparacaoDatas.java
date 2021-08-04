@@ -12,10 +12,11 @@ public class ComparacaoDatas {
 
 		Date dataVencimentoBoleto = simpleDateFormat.parse("15/08/2021");
 
-		Date dataAtualHoje = simpleDateFormat.parse("16/08/2021");
+		Date dataAtualHoje = simpleDateFormat.parse("04/08/2021");
 
-		/*Se a data 1 é maior que a data 2*/
-		if (dataVencimentoBoleto.after(dataAtualHoje)) {/*Posterior ou maior ou depois da data atual*/
+		// After: se data 1 é maior que data 2
+		// Before: se data 1 é menor que data 2
+		if (dataVencimentoBoleto.after(dataAtualHoje)) {/* Posterior ou maior ou depois da data atual */
 			System.out.println("Boleto não venceu!!");
 		} else {
 			System.out.println("Boleto Vencido - URGENTE");
