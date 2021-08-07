@@ -25,7 +25,7 @@ public class Arquivos {
 		pessoa3.setIdade(23);
 		pessoa3.setEmail("teste3@gmail.com");
 
-		/* Pode vir do banco de dados ou de qualquer fonte de dados */
+		/* Pode vim do banco de dados ou de qualquer fonte de dados */
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		pessoas.add(pessoa1);
 		pessoas.add(pessoa2);
