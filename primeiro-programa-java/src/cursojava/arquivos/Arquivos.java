@@ -31,8 +31,7 @@ public class Arquivos {
 		pessoas.add(pessoa2);
 		pessoas.add(pessoa3);
 
-		File arquivo = new File(
-				"C:\\Users\\Luciano Viana\\git\\Formacao-Java-Web-Full-Stack\\primeiro-programa-java\\src\\cursojava\\arquivos\\arquivo.txt");
+		File arquivo = new File("C:\\Users\\Luciano Viana\\git\\Formacao-Java-Web-Full-Stack\\primeiro-programa-java\\src\\cursojava\\arquivos\\arquivo.txt");
 
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
