@@ -12,18 +12,18 @@ public class Arquivos {
 
 		Pessoa pessoa1 = new Pessoa();
 		pessoa1.setNome("Luciano");
-		pessoa1.setIdade(30);
 		pessoa1.setEmail("teste@gmail.com");
+		pessoa1.setIdade(30);
 
 		Pessoa pessoa2 = new Pessoa();
-		pessoa2.setNome("Débora");
-		pessoa2.setIdade(25);
+		pessoa2.setNome("Debora");
 		pessoa2.setEmail("teste2@gmail.com");
+		pessoa2.setIdade(25);
 
 		Pessoa pessoa3 = new Pessoa();
 		pessoa3.setNome("Bruna");
-		pessoa3.setIdade(23);
 		pessoa3.setEmail("teste3@gmail.com");
+		pessoa3.setIdade(23);
 
 		/* Pode vim do banco de dados ou de qualquer fonte de dados */
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
@@ -31,7 +31,9 @@ public class Arquivos {
 		pessoas.add(pessoa2);
 		pessoas.add(pessoa3);
 
-		File arquivo = new File("C:\\Users\\Luciano Viana\\git\\Formacao-Java-Web-Full-Stack\\primeiro-programa-java\\src\\cursojava\\arquivos\\arquivo.txt");
+		//Arquivo no formato TXT
+		//File arquivo = new File("C:\\Users\\Luciano Viana\\git\\Formacao-Java-Web-Full-Stack\\primeiro-programa-java\\src\\cursojava\\arquivos\\arquivo.txt");
+		File arquivo = new File("C:\\Users\\Luciano Viana\\git\\Formacao-Java-Web-Full-Stack\\primeiro-programa-java\\src\\cursojava\\arquivos\\arquivo.csv");
 
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
@@ -41,8 +43,7 @@ public class Arquivos {
 		FileWriter escrever_no_arquivo = new FileWriter(arquivo);
 
 		for (Pessoa p : pessoas) {
-			escrever_no_arquivo.write(
-					"Nome:" + p.getNome() + "; " + "Idade:" + p.getIdade() + "; " + "E-mail:" + p.getEmail() + "\n");
+			escrever_no_arquivo.write(p.getNome() + " ;" + p.getEmail() + " ;" + p.getIdade() + "\n");
 		}
 
 		escrever_no_arquivo.flush(); //Para persisitir as alterações utiliza o flush() 
