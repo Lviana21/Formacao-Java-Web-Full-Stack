@@ -51,7 +51,7 @@ public class ApachePoi {
 		pessoas.add(pessoa4);
 		
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(); /*Vai ser usado para escrever a planilha*/
-		HSSFSheet linhasPessoas = hssfWorkbook.createSheet("Planilha de pessoas JDev Treinamentos");/*Criar a planilha*/
+		HSSFSheet linhasPessoas = hssfWorkbook.createSheet("Planilha de pessoas Dev Java");/*Criar a planilha*/
 		
 		int numeroLinha = 0;
 		
