@@ -72,10 +72,12 @@ public class ApachePoi {
 			
 		}// Termino de montrar a planilha
 		
+		//Classe hssfWorkbook é utilizado para gerar um arquivo de planilha Excel
 		FileOutputStream saida = new FileOutputStream(file);
 		hssfWorkbook.write(saida);//Escreve planilhaa em arquivo
 		saida.flush();//Para persisitir as alterações utiliza o flush() 
 		saida.close();//Fechar o arquivo
+		// A classe Workbook necessita de um FileOutputStream para armazenar a planilha em disco
 		
 		System.out.println("Planilha foi criada!!");
 		
