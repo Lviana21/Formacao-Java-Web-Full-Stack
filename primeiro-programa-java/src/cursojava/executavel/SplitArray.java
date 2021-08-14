@@ -11,6 +11,7 @@ public class SplitArray {
 		 * método retorno um Array de Strings.
 		 */
 		String valorArray[] = texto.split(",");
+		
 
 		for (int pos = 0; pos < valorArray.length; pos++) {
 			if (pos == 0) {
