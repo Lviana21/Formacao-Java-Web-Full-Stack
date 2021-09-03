@@ -8,4 +8,5 @@ public class AndamentoDoCurso {
 	// 31-08-21: Pesquisando solução para erro de autocomplete no arquivo index.html - IDE não está encontrando o Document em javascript
 	// 01-09-21: Downgrade da versão do Eclipse IDE para 2019 para resolver problema de autocomplete JavaScript
 	// 02-09-21: Adicionado validação de dados com JavaScript
+	// 03-09-21: Finalizado validação de dados utilizando JavaScript
 }
