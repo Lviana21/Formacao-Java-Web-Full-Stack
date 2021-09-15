@@ -10,4 +10,5 @@ public class AndamentoDoCurso {
 	// 02-09-21: Adicionado validação de dados com JavaScript
 	// 03-09-21: Finalizado validação de dados utilizando JavaScript
 	// 11-09-21: Criação do projeto JDBC novamente para treino e melhor entendimento
+	// 15-09-21: Entendendo o funcionamento do Servlet 
 }
