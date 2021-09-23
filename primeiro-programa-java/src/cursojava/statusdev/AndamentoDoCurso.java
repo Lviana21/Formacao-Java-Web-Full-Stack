@@ -12,4 +12,5 @@ public class AndamentoDoCurso {
 	// 11-09-21: Criação do projeto JDBC novamente para treino e melhor entendimento
 	// 15-09-21: Entendendo o funcionamento do Servlet 
 	// 22-09-21: Criado de novo projeto "curso-jsp" para resolver problema de Login
-}
+	// 23-09-21: Implementado Class FilterAutenticacao
+} 
