@@ -13,4 +13,5 @@ public class AndamentoDoCurso {
 	// 15-09-21: Entendendo o funcionamento do Servlet 
 	// 22-09-21: Criado de novo projeto "curso-jsp" para resolver problema de Login
 	// 23-09-21: Implementado Class FilterAutenticacao
+	// 21-10-21: Entendendo os aspectos Desenvolvimento Cloud Native
 } 
